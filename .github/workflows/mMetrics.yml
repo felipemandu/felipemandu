@@ -24,10 +24,17 @@ jobs:
       - name: Metrics embed
         uses: lowlighter/metrics@v3.14
         with:
-          base: repositories 
           repositories: 100 
           repositories_affiliations: owner 
           user: felipemandu
+          template: repository
+          filename: metrics.repository.svg
           token: ${{ secrets.METRICSTOKEN }}
+          repo: metrics
+          plugin_lines: yes
+          plugin_followup: yes
+          plugin_projects: yes
+          plugin_projects_repositories: lowlighter/metrics/projects/1
+          plugins_errors_fatal: ${{ github.repository == 'felipemandu/felipemandu' }}
           output_action: pull-request
           delay: 120

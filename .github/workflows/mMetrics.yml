@@ -29,3 +29,5 @@ jobs:
           repositories_affiliations: owner 
           user: felipemandu
           token: ${{ secrets.METRICSTOKEN }}
+          output_action: pull-request
+          delay: 120

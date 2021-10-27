@@ -28,3 +28,4 @@ jobs:
           repositories: 100 
           repositories_affiliations: owner 
           user: felipemandu
+          token: ${{ secrets.METRICSTOKEN }}
